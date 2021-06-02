@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import { StatusBar } from '../components/StatusBar'
+import { Link } from '@material-ui/core'
 
 export default function Home() {
   return (
-    <div className='w-full md:w-96 mx-auto py-2'>
+    <div className='home'>
       <Head>
         <title>Minesweeper</title>
         <meta
@@ -13,12 +14,12 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <main className='mx-auto'>
+      <main className='main'>
         <StatusBar mineNum={30} emotionFace={'happy'} time={0} />
       </main>
 
-      <footer className='text-center py-8'>
-        <a href='https://github.com/MrHanson/minesweeper.git'>Copyright © 2021 Hanson Leung</a>
+      <footer className='footer'>
+        <Link href="https://github.com/MrHanson/minesweeper.git" >Copyright © 2021 Hanson Leung</Link>
       </footer>
     </div>
   )
